@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
 <body><noscript>Enable JavaScript please.</noscript>
   <div class="page__inner">
     <div class="page__content">
-      <section class="person">
+      <section class="person" id="home">
         <h1 class="person__heading">Web Developer</h1>
         <picture class="picture">
           <source media="(min-width: 0)" type="image/webp" srcset="img/person-320p.webp, img/person-640p.webp 2x" /><img class="person__img" alt="John Smith" width="320" src="img/person-320p.jpg" srcset="img/person-640p.jpg 2x" />
@@ -73,6 +73,58 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2 class="person__name">John Smith</h2><a class="btn person__btn" href="#projects">Projects</a>
       </section>
       <!--/.person-->
+      <nav class="navbar"><a class="navbar__link" href="#home">Home</a><a class="navbar__link" href="#about">About</a><a class="navbar__link" href="#portfolio">Portfolio</a><a class="navbar__link" href="#contact">Contact</a></nav>
+      <!--/.navbar-->
+      <section class="about" id="about">
+        <h2 class="about__heading">About Me</h2>
+        <div class="about__progress-wrapper">
+          <div class="about__bar">
+            <p class="about__bar-text">HTML<span> 97</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">CSS<span> 89</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">JavaScript<span> 85</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">SASS<span> 87</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">ReactJS<span> 80</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">NodeJS<span> 70</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+          <div class="about__bar">
+            <p class="about__bar-text">MongoDB<span> 50</span> %</p>
+            <div class="about__bar-percent"></div>
+          </div>
+        </div>
+        <!--/.about__progress-wrapper-->
+        <div class="about__services">
+          <div class="about__service-item"><i class="far fa-lightbulb"></i>
+            <h3 class="about__service-heading">Creative</h3>
+          </div>
+          <div class="about__service-item"><i class="fas fa-cut"></i>
+            <h3 class="about__service-heading">Problem Solving</h3>
+          </div>
+          <div class="about__service-item"><i class="fas fa-tachometer-alt"></i>
+            <h3 class="about__service-heading">Fast</h3>
+          </div>
+          <div class="about__service-item"><i class="fas fa-rocket"></i>
+            <h3 class="about__service-heading">Dynamic</h3>
+          </div>
+        </div>
+        <!--/.about__services-->
+      </section>
+      <!--/.about-->
       <footer class="page-footer" role="contentinfo">
         <div class="page-footer__inner"></div>
       </footer>
