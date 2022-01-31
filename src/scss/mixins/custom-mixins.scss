@@ -1,0 +1,10 @@
+@mixin center ($column: row) {
+  display: flex;
+
+  @if ($column == 'col') {
+    flex-direction: column;
+  }
+
+  align-items: center;
+  justify-content: center;
+}

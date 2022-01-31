@@ -10,7 +10,7 @@ block header
 
 block content
 
-  section.person
+  section.person#home
     h1.person__heading Web Developer
 
     +picture({
@@ -24,3 +24,10 @@ block content
     h2.person__name John Smith
     +btn('Projects').person__btn(href='#projects')
   ///.person
+
+  nav.navbar
+    a.navbar__link(href='#home') Home
+    a.navbar__link(href='#about') About
+    a.navbar__link(href='#portfolio') Portfolio
+    a.navbar__link(href='#contact') Contact
+  ///.navbar
