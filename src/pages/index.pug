@@ -6,14 +6,21 @@ append config
     currentDescription = 'Pink app'
     currentUrl = 'index.html'
 
+block header
+
 block content
 
-  h1 Top news
+  section.person
+    h1.person__heading Web Developer
 
-  ol
-    li Man Found Having Tea Party With Donkey Again
-    li Woman With Epic Tattoo Arrested for 37th Time
-    li Viral Photo of Donkey Had Been Photoshopped
-    li Man Buys Hats For Low Income Local Family
-    li Man Jailed For Threatening Wife With Crumpled Hawk
-    li Small Tornado Forcast in Northern Regions
+    +picture({
+      'img': 'person',
+      'alt': 'John Smith',
+      'lg': false,
+      'md': false,
+      'ext': 'jpg'
+    }, 'person__img')
+
+    h2.person__name John Smith
+    +btn('Projects').person__btn(href='#projects')
+  ///.person

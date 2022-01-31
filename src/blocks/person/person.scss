@@ -1,0 +1,173 @@
+// В этом файле должны быть стили для БЭМ-блока person, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.person {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-320p.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: $screen-xs) {
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-640p.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .no-webp & {
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-640p.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .no-webp & {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-320p.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-640p.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-1280p.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .no-webp & {
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-1280p.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .no-webp & {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-640p.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-1280p.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-2560p.webp');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .no-webp & {
+        background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-2560p.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .no-webp & {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-1280p.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-2560p.webp');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .no-webpalpha & {
+      background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.3)), url('../img/person-bg-2560p.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &__heading {
+    margin: 0;
+    margin-bottom: 5rem;
+    border-bottom: 0.3rem solid #fff;
+    padding: 0 3rem;
+
+    font-size: 6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    color: #fff;
+    text-shadow: 0.2rem 0.2rem 1rem #555;
+
+    transform: skew(-10deg);
+    background-color: $text-color-accent;
+  }
+
+  &__img {
+    width: 25rem;
+    height: 25rem;
+    border: 0.7rem dotted $text-color-accent;
+    padding: 0.5rem;
+    border-radius: 50%;
+
+    opacity: 0.9;
+    background-color: rgba(255, 255, 255, 0.7);
+    object-fit: cover;
+  }
+
+  &__name {
+    margin: 5rem 0;
+    padding: 0.5rem 3rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.3rem;
+    color: #fff;
+
+    transform: skew(-10deg);
+    background-color: $text-color-accent;
+  }
+
+  &__btn.btn {
+    @include btn-hover;
+
+    border: 0.3rem solid #333;
+    padding: 0.5rem 1rem;
+    border-radius: unset;
+
+    font-size: 1.7rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.3rem;
+    color: #333;
+
+    background-color: #fff;
+  }
+}
