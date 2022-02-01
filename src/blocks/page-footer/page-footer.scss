@@ -39,5 +39,9 @@
     text-align: center;
     letter-spacing: 0.2rem;
     color: #aaa;
+
+    @media (max-width: 600px) {
+      width: 70%;
+    }
   }
 }

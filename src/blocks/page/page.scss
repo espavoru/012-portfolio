@@ -35,6 +35,14 @@
   font-size: 62.5%;
   scroll-behavior: smooth;
 
+  @media (max-width: 500px) {
+    font-size: 55%;
+  }
+
+  @media (max-width: 450px) {
+    font-size: 45%;
+  }
+
   &__inner {
     display: flex;
     flex-direction: column;
