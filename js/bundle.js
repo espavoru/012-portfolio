@@ -119,6 +119,17 @@ eval("function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol ===
 
 /***/ }),
 
+/***/ "./src/blocks/navbar/navbar.js":
+/*!*************************************!*\
+  !*** ./src/blocks/navbar/navbar.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("var navbar = document.querySelector('.navbar');\nvar navbarOffsetTop = navbar.offsetTop;\nvar sections = document.querySelectorAll('section');\nvar navbarLinks = document.querySelectorAll('.navbar__link');\nvar progress = document.querySelector('.about__progress-wrapper');\nvar progressBarPercents = [97, 89, 85, 87, 80, 70, 50];\nwindow.addEventListener('scroll', function () {\n  mainFn();\n});\n\nvar mainFn = function mainFn() {\n  if (window.pageYOffset >= navbarOffsetTop) {\n    navbar.classList.add('sticky');\n  } else {\n    navbar.classList.remove('sticky');\n  }\n\n  sections.forEach(function (section, i) {\n    if (window.pageYOffset >= section.offsetTop - 10) {\n      navbarLinks.forEach(function (navbarLink) {\n        navbarLink.classList.remove('change');\n      });\n      navbarLinks[i].classList.add('change');\n    }\n  });\n\n  if (window.pageYOffset + window.innerHeight >= progress.offsetTop + 300) {\n    document.querySelectorAll('.about__bar-percent').forEach(function (el, i) {\n      el.style.width = \"\".concat(progressBarPercents[i], \"%\");\n      el.previousElementSibling.firstElementChild.textContent = progressBarPercents[i];\n    });\n  }\n};\n\nmainFn();\nwindow.addEventListener('resize', function () {\n  window.location.reload();\n});\n\n//# sourceURL=webpack:///./src/blocks/navbar/navbar.js?");
+
+/***/ }),
+
 /***/ "./src/js/entry.js":
 /*!*************************!*\
   !*** ./src/js/entry.js ***!
@@ -126,7 +137,7 @@ eval("function _typeof(obj) { \"@babel/helpers - typeof\"; if (typeof Symbol ===
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n__webpack_require__(/*! ../blocks/modernizr/modernizr.js */ \"./src/blocks/modernizr/modernizr.js\");\n\n__webpack_require__(/*! ../blocks/burger/burger.js */ \"./src/blocks/burger/burger.js\");\n\n__webpack_require__(/*! ../blocks/main-nav/main-nav.js */ \"./src/blocks/main-nav/main-nav.js\");\n\n__webpack_require__(/*! ./script.js */ \"./src/js/script.js\");\n/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n//# sourceURL=webpack:///./src/js/entry.js?");
+eval("/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n__webpack_require__(/*! ../blocks/modernizr/modernizr.js */ \"./src/blocks/modernizr/modernizr.js\");\n\n__webpack_require__(/*! ../blocks/burger/burger.js */ \"./src/blocks/burger/burger.js\");\n\n__webpack_require__(/*! ../blocks/main-nav/main-nav.js */ \"./src/blocks/main-nav/main-nav.js\");\n\n__webpack_require__(/*! ../blocks/navbar/navbar.js */ \"./src/blocks/navbar/navbar.js\");\n\n__webpack_require__(/*! ./script.js */ \"./src/js/script.js\");\n/*!*\n * ВНИМАНИЕ! Этот файл генерируется автоматически.\n * Любые изменения этого файла будут потеряны при следующей компиляции.\n * Любое изменение проекта без возможности компиляции ДОЛЬШЕ И ДОРОЖЕ в 2-5 раз.\n */\n\n//# sourceURL=webpack:///./src/js/entry.js?");
 
 /***/ }),
 
