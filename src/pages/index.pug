@@ -2,8 +2,8 @@ extends ../pug/layout.pug
 
 append config
   -
-    currentTitle = 'Главная'
-    currentDescription = 'Pink app'
+    currentTitle = 'Home'
+    currentDescription = 'Portfolio webpage'
     currentUrl = 'index.html'
 
 block header
@@ -22,7 +22,7 @@ block content
     }, 'person__img')
 
     h2.person__name John Smith
-    +btn('Projects').person__btn(href='#projects')
+    +btn('Projects').person__btn(href='#portfolio')
   ///.person
 
   nav.navbar
